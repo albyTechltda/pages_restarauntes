@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.9rem;
+    background-color: var(--white-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 5.5rem;
+}
+
+h3 {
+    font-size: 5rem;
+}
+
+h4 {
+    font-size: 4.5rem;
+}
+
+h5 {
+    font-size: 4rem;
+}
+
+h6 {
+    font-size: 3.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.section {
+    min-height: 100vh;
+}
+
+.logoHome {
+    height: 6rem;
+    width: 6rem;
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+img:hover.logoHome {
+    background-color: var(--gray-color);
+    border-radius: 30px;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+    border-bottom: 0.1rem solid var(--gray-color);
+    background-color: var(--white-color);
+}
+
+.main-content {
+    max-width: 140rem;
+    margin: 0 auto;
+    padding: var(--gap);
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu ul li a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    display: block;
+    padding: 2rem;
+    font-size: 2rem;
+    color: inherit;
+    position: relative;
+}
+
+.menu ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    width: 0;
+    height: 0.2rem;
+    background-color: var(--black-color);
+    transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover {
+    background-color: var(--gray-color);
+    border-radius: 30px;
+}
+
+.menu ul li a:hover::after {
+    width: 50%;
+    left: 25%;
+}
+
+.menu-spacing {
+    height: 6rem;
+}
+
+.anchor1-bg {
+    background-image: url(../img/wallpaper1.jpg);
+    background-repeat: repeat-x;
+    animation: bg-animation 20s linear 0s infinite alternate;
+}
+
+@keyframes bg-animation {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+.home-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: var(--gap);
+    min-height: 100vh;
+}
+
+.home-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.home-text-bg {
+    background-color: var(--white-color);
+    border-top-left-radius: 13rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 13rem;
+    border-bottom-left-radius: 1rem;
+    box-shadow: 0px 0px 5px 5px var(--black-color);
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-text-bg h2 {
+    color: var(--logo-blue);
+    text-shadow: 0.5px 0.5px 1px var(--black-color), 0.5px -0.5px 1px var(--black-color), -0.5px 0.5px 1px var(--black-color), -0.5px -0.5px 1px var(--black-color);
+}
+
+.home-text-bg h3 {
+    color: var(--logo-red);
+    text-shadow: 0.5px 0.5px 1px var(--black-color), 0.5px -0.5px 1px var(--black-color), -0.5px 0.5px 1px var(--black-color), -0.5px -0.5px 1px var(--black-color);
+}
+
+.comida-h2 {
+    text-align: center;
+    color: var(--logo-red);
+    display: grid;
+    align-items: center;
+    gap: var(--gap);
+    text-shadow: 0.5px 0.5px 1px var(--black-color), 0.5px -0.5px 1px var(--black-color), -0.5px 0.5px 1px var(--black-color), -0.5px -0.5px 1px var(--black-color);
+}
+
+.alinhamento {
+    display: grid;
+    gap: var(--gap);
+    min-height: 100vh;
+    place-content: center;
+}
+
+.grid-spacing {
+    padding: 1rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.grid-comida {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.grid-comida img {
+    transition: all 300ms ease-in-out;
+}
+
+.grid-comida img:hover {
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
+}
+
+.grid-spacing-avaliacoes {
+    margin: 2rem 0rem 0rem 0rem;
+    width: 100%;
+    overflow: hidden;
+    border: -1rem solid var(--white-color);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 5px var(--darkgray-color);
+}
+
+.grid-spacing-avaliacoes-nota {
+    text-align: center;
+    margin: 2rem 0rem 0rem 0rem;
+    overflow: hidden;
+    border: -1rem solid var(--white-color);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 5px var(--darkgray-color);
+}
+
+.avaliacoes-h2 {
+    text-align: center;
+    color: var(--logo-red);
+    display: grid;
+    align-items: center;
+    gap: var(--gap);
+    text-shadow: 0.5px 0.5px 1px var(--black-color), 0.5px -0.5px 1px var(--black-color), -0.5px 0.5px 1px var(--black-color), -0.5px -0.5px 1px var(--black-color);
+}
+
+.grid-avaliacoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-porcoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-porcoes img {
+    transition: all 300ms ease-in-out;
+}
+
+.bg-lightgray {
+    background-color: var(--lightgray-color);
+}
+
+.grid-porcoes img:hover {
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
+}
+
+.sobre-content {
+    display: grid;
+    align-items: center;
+    gap: var(--gap);
+    min-height: 100vh;
+    grid-template-columns: 1fr 1fr;
+}
+
+.sobre-content-ajuste {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+.sobre-text-bg {
+    background-color: var(--white-color);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 13rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 13rem;
+    box-shadow: 0px 0px 5px 5px var(--black-color);
+    padding: 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.sobre-localizacao {
+    width: 25px;
+    vertical-align: bottom;
+}
+
+.sobre-espacamento {
+    margin: 1rem 0;
+}
+
+.sobre-ifood {
+    width: 105px;
+}
+
+img.sobre-ifood.sobre-espacamento:hover {
+    transform: scale(1.1);
+}
+
+.footer-cl {
+    text-align: center;
+    padding: 1rem 0 1rem 0;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--black-color);
+
+}
+
+.close-menu {
+    display: none;
+}
+
+div img.grid-spacing {
+    border-radius: 30px;
+}
